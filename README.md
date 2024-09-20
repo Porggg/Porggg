@@ -1,5 +1,5 @@
 ## Hi there 👋
-I'm Porggg, a french Computer Science student at Ensimag - Grenoble INP.aa
+I'm Porggg, a french Computer Science student at Ensimag - Grenoble INP.
 
 <!--
 **Porggg/Porggg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
