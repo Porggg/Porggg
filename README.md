@@ -1,3 +1,5 @@
+<img src="banner.svg" width="100%" alt="Computer Vision banner" />
+
 ## Hi there 👋
 🎓 I'm Porggg, a french Computer Science student at Ensimag - Grenoble INP.  
 🌱 Currently looking for an internship in Computer Vision, a field I love to explore.
@@ -9,8 +11,9 @@ I have the opportunity to learn more about :
 
 <details>
 <summary><b>👁️ Computer Vision</b></summary>
+  
 - Corner detection, SIFT, detection, segmentation, classification, tracking, neural networks  
-- Implementation in python : [Computer Vision](https://github.com/Porggg/computer-vision)
+- Implementation in python : https://github.com/Porggg/computer-vision
 
 </details>
 
@@ -63,5 +66,3 @@ I have two types of projects :
 - The one i made myself, in python during high school principally, and during my free time. (see repos)
 - The one i did in college in C, Java, Python, and more. You can't find them here because they belong to Ensimag, But i give a short description of it on my website. (https://porggg.github.io/me/)
 -->
----
-[![](https://visitcount.itsvg.in/api?id=Porggg&icon=0&color=0)](https://visitcount.itsvg.in)
