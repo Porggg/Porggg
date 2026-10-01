@@ -1,8 +1,44 @@
 ## Hi there 👋
-I'm Porggg, a french Computer Science student at Ensimag - Grenoble INP.
-Currently looking for an internship in Computer Vision, a field I love to explore.
+🎓 I'm Porggg, a french Computer Science student at Ensimag - Grenoble INP.  
+🌱 Currently looking for an internship in Computer Vision, a field I love to explore.
+
+## What I'm studying 💻  
+
+Under my exchange semester at POSTECH - Pohang University of Science and Technology, in South Korea.  
+I have the opportunity to learn more about : 
+
+<details>
+<summary><b>👁️ Computer Vision</b></summary>
+- Corner detection, SIFT, detection, segmentation, classification, tracking, neural networks  
+- Implementation in python : [Computer Vision](https://github.com/Porggg/computer-vision)
+
+</details>
+
+<details>
+<summary><b>🧠 Machine Learning</b></summary>
+
+- Supervised (Regression, classification with SVM & Neural Network)  
+- Unsupervised (Clustering, PCA, density estimation)  
+- Reinforcement (Markov, PI/VI, Monte-Carlo)  
+
+</details>
+
+<details>
+<summary><b>📸 Computational Imaging</b></summary>
+  
+- Image formation, forward & inverse problems, rendering & multi-view)  
+
+</details>
+
+<details>
+<summary><b>⚙️ Differential Geometry</b></summary>
+  
+- Curves in space, calculus & geometry on a Surface, Gauss-Bonnet theorem, Riemannian Geometry)  
+
+</details>
 
 
+  
 <!--
 **Porggg/Porggg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
