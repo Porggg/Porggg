@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#00c9a7" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scanGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00c9a7" stop-opacity="0"/>
+      <stop offset="1" stop-color="#00c9a7" stop-opacity="0.18"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="320" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
+    .box  { fill: none; stroke: #00c9a7; stroke-width: 2.5; stroke-dasharray: 100; stroke-dashoffset: 100;
+            animation: draw 7s ease-out infinite; }
+    .tag  { opacity: 0; animation: tag 7s ease-out infinite; }
+    .d1 { animation-delay: 0s; }
+    .d2 { animation-delay: 0.5s; }
+    .d3 { animation-delay: 1s; }
+    .scan { animation: scan 4s linear infinite; }
+    .kp   { fill: #00c9a7; animation: pulse 2s ease-in-out infinite; }
+    .kp:nth-of-type(2n) { animation-delay: 0.7s; }
+    .kp:nth-of-type(3n) { animation-delay: 1.3s; }
+    .cursor { animation: blink 1s steps(1) infinite; }
+
+    @keyframes draw {
+      0%   { stroke-dashoffset: 100; opacity: 1; }
+      18%  { stroke-dashoffset: 0;   opacity: 1; }
+      88%  { stroke-dashoffset: 0;   opacity: 1; }
+      100% { stroke-dashoffset: 0;   opacity: 0; }
+    }
+    @keyframes tag {
+      0%, 16% { opacity: 0; }
+      24%, 88% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes scan {
+      from { transform: translateY(-70px); }
+      to   { transform: translateY(330px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 1; }
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <!-- background + grid -->
+    <rect width="1200" height="320" fill="#0d1117"/>
+    <rect width="1200" height="320" fill="url(#grid)"/>
+
+    <!-- scanning line -->
+    <g class="scan">
+      <rect x="0" y="0" width="1200" height="60" fill="url(#scanGlow)"/>
+      <rect x="0" y="60" width="1200" height="2" fill="#00c9a7" fill-opacity="0.55"/>
+    </g>
+
+    <!-- viewfinder corners -->
+    <g fill="none" stroke="#00c9a7" stroke-width="3" stroke-opacity="0.8">
+      <path d="M24 64 V24 H64"/>
+      <path d="M1136 24 H1176 V64"/>
+      <path d="M24 256 V296 H64"/>
+      <path d="M1136 296 H1176 V256"/>
+    </g>
+
+    <!-- LEFT: keypoints / feature graph -->
+    <g stroke="#00c9a7" stroke-opacity="0.35" stroke-width="1.2">
+      <line x1="100" y1="130" x2="155" y2="105"/>
+      <line x1="155" y1="105" x2="215" y2="145"/>
+      <line x1="215" y1="145" x2="265" y2="115"/>
+      <line x1="100" y1="130" x2="135" y2="195"/>
+      <line x1="135" y1="195" x2="215" y2="145"/>
+      <line x1="135" y1="195" x2="190" y2="230"/>
+      <line x1="190" y1="230" x2="255" y2="205"/>
+      <line x1="255" y1="205" x2="215" y2="145"/>
+    </g>
+    <g>
+      <circle class="kp" cx="100" cy="130" r="4"/>
+      <circle class="kp" cx="155" cy="105" r="4"/>
+      <circle class="kp" cx="215" cy="145" r="5"/>
+      <circle class="kp" cx="265" cy="115" r="4"/>
+      <circle class="kp" cx="135" cy="195" r="4"/>
+      <circle class="kp" cx="190" cy="230" r="4"/>
+      <circle class="kp" cx="255" cy="205" r="4"/>
+    </g>
+    <rect class="box d2" x="76" y="84" width="214" height="168" pathLength="100"/>
+    <g class="tag d2">
+      <rect x="76" y="60" width="150" height="24" fill="#00c9a7"/>
+      <text x="84" y="77" class="mono" font-size="14" font-weight="600" fill="#0d1117">features · 0.92</text>
+    </g>
+
+    <!-- CENTER: name -->
+    <text x="600" y="162" text-anchor="middle" class="mono" font-size="72" font-weight="700" fill="#e6edf3">Porggg</text>
+    <rect class="box d1" x="420" y="88" width="360" height="104" pathLength="100"/>
+    <g class="tag d1">
+      <rect x="420" y="64" width="138" height="24" fill="#00c9a7"/>
+      <text x="428" y="81" class="mono" font-size="14" font-weight="600" fill="#0d1117">student · 0.99</text>
+    </g>
+    <text x="600" y="240" text-anchor="middle" class="mono" font-size="18" fill="#8b949e">Computer Vision · Ensimag – Grenoble INP</text>
+
+    <!-- RIGHT: internship status -->
+    <text x="1020" y="152" text-anchor="middle" class="mono" font-size="16" fill="#8b949e">looking for a</text>
+    <text x="1012" y="182" text-anchor="middle" class="mono" font-size="18" font-weight="700" fill="#00c9a7">CV internship</text>
+    <text x="1093" y="182" class="mono cursor" font-size="18" font-weight="700" fill="#00c9a7">_</text>
+    <rect class="box d3" x="910" y="84" width="214" height="168" pathLength="100"/>
+    <g class="tag d3">
+      <rect x="910" y="60" width="132" height="24" fill="#00c9a7"/>
+      <text x="918" y="77" class="mono" font-size="14" font-weight="600" fill="#0d1117">status · open</text>
+    </g>
+  </g>
+</svg>
